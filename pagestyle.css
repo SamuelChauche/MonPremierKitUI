@@ -1,0 +1,136 @@
+/************************/
+/*      STYLES          */
+/************************/
+
+/* Variables de la charte graphique */
+:root {
+    --primary: #001524;
+    --secondary: #15616d;
+    --dark: #78290f;
+    --medium-light: #ff7d00;
+    --light: #ffecd1;
+}
+
+/* Typographie */
+body {
+    font-family: 'Zain', sans-serif;
+    color: var(--dark);
+    background-color: var(--light);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Delius Swash Caps', cursive;
+}
+
+/* Container principal */
+.container {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+/* Image responsive */
+.responsive-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Titre de l'événement */
+.event-title {
+    color: var(--primary);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Informations de l'événement */
+.event-info {
+    font-size: 1.1rem;
+    color: var(--dark);
+    margin: 0.5rem 0;
+}
+
+.event-info i {
+    color: var(--primary);
+    margin-right: 0.5rem;
+}
+
+/* Section icônes + bouton */
+.icon-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.icon-section i {
+    font-size: 2rem;
+    color: var(--primary);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.icon-section i:hover {
+    color: var(--secondary);
+}
+
+.icon-section .btn {
+    margin-left: flex;
+    background-color: var(--primary);
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.icon-section .btn:hover {
+    background-color: var(--secondary);
+}
+
+/* Description */
+.section-title {
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.event-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--dark);
+}
+
+/* Informations supplémentaires */
+.event-details {
+    list-style-type: none;
+    padding: 0;
+}
+
+.event-details li {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    color: var(--dark);
+}
+
+.event-details i {
+    color: var(--primary);
+    margin-right: 0.5rem;
+}
+
+/* Réseaux sociaux */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-icons a {
+    color: var(--primary);
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--secondary);
+}

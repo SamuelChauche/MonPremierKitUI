@@ -1,0 +1,777 @@
+/************************/
+/*      COULEURS        */
+/************************/
+:root {
+    --primary: #00223a;
+    --secondary: #15616d;
+    --dark: #78290f;
+    --medium-light: #ff7d00;
+    --light: #ffecd1;
+    --danger: #ff7d00;
+    --warning: #96310f;
+    --success: #15616d;
+    --info: #001524;
+}
+
+.primary {
+    background-color: var(--primary);
+}
+
+.secondary {
+    background-color: var(--secondary);
+}
+
+.dark {
+    background-color: var(--dark);
+}
+
+.medium-light {
+    background-color: var(--medium-light);
+}
+
+.light {
+    background-color: var(--light);
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.text-secondary {
+    color: var(--secondary);
+}
+
+.text-dark {
+    color: var(--dark);
+}
+
+.text-medium-light {
+    color: var(--medium-light);
+}
+
+.text-light {
+    color: var(--light);
+}
+
+/*******************/
+/*      NAVBAR     */
+/*******************/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary);
+    /* Couleur principale */
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Delius Swash Caps', cursive;
+    /* Police pour le logo */
+    font-size: 2rem;
+    color: var(--light);
+    /* Texte clair */
+    text-decoration: none;
+}
+
+.navbar-toggle {
+    display: none;
+    /* Caché par défaut sur les grands écrans */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.navbar-toggle .icon {
+    font-size: 1.5rem;
+    color: var(--light);
+    /* Icône claire */
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    font-family: 'Zain', sans-serif;
+    font-size: 1.5rem;
+    /* Police pour les liens */
+    color: var(--light);
+    /* Texte clair */
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    margin: 0 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: var(--secondary);
+    /* Couleur secondaire au survol */
+    border-radius: 4px;
+}
+
+/************************/
+/*      RESPONSIVE      */
+/************************/
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-brand {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .navbar-toggle {
+        display: block;
+        /* Afficher le bouton toggle sur les petits écrans */
+    }
+
+    .navbar-menu {
+        display: none;
+        /* Cacher le menu par défaut sur les petits écrans */
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+        /* Afficher le menu quand il est actif */
+    }
+
+    .nav-link {
+        margin: 0.5rem 0;
+    }
+}
+
+
+/************************/
+/*      TYPOGRAPHIE     */
+/************************/
+body {
+    font-family: 'Zain', sans-serif;
+    color: var(--dark);
+}
+
+h1 {
+    font-family: 'Delius Swash Caps', cursive;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Zain', sans-serif;
+
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+
+
+p {
+    font-size: 1rem;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+blockquote {
+    font-style: italic;
+    border-left: 4px solid var(--primary);
+    padding-left: 1rem;
+}
+
+ul,
+ol {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+li {
+    margin: 0.5rem 0;
+}
+
+/************************/
+/*      BOUTONS         */
+/************************/
+.btn {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 0.5rem;
+    transition: opacity 0.3s ease; /* Ajoute une transition pour un effet fluide */
+}
+
+.btn:hover {
+    opacity: 0.8; /* Effet d'opacité au survol */
+}
+
+#buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.btn.primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn.warning {
+    background-color: var(--warning);
+    color: white;
+}
+
+.btn.danger {
+    border: 2px solid;
+    border-color: var(--warning);
+    background-color: var(--danger);
+    color: var(--dark);
+    font-weight: bold;
+}
+
+.btn.info {
+    background-color: var(--info);
+    color: white;
+}
+
+.btn.success {
+    background-color: var(--success);
+    color: white;
+}
+
+.btn.outline.primary {
+    background-color: transparent;
+    border: 2px solid;
+    border-color: var(--primary);
+    color: var(--info);
+}
+
+.btn.sm {
+    font-size: 0.5rem;
+    padding: 0.25rem 0.15rem;
+}
+
+.btn.lg {
+    background-color: var(--primary);
+    font-size: 2rem;
+    padding: 1.75rem 1.5rem;
+}
+
+/************************/
+/*      ICONOGRAPHIE    */
+/************************/
+#icons {
+    text-align: center;
+    /* Centre le texte et les éléments inline */
+}
+
+#icons .icon,
+#icons .icon-row {
+    display: flex;
+    justify-content: center;
+    /* Centre horizontalement */
+    align-items: center;
+    /* Centre verticalement */
+    gap: 1rem;
+    /* Espacement entre les icônes */
+    margin: 1rem 0;
+    /* Espacement entre les rangées */
+}
+
+#icons img {
+    margin: 0 0.5rem;
+    /* Espacement entre les images */
+}
+
+#icons .icon i {
+    font-size: 2rem;
+    /* Taille des icônes emoji */
+}
+
+/************************/
+/*      FORMULAIRE      */
+/************************/
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--light);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-field {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-field label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transition: 0.2s ease all;
+    color: var(--medium-light);
+}
+
+.input-field input,
+.input-field textarea {
+    width: 100%;
+    padding: 0.5rem 0;
+    border: none;
+    border-bottom: 2px solid var(--medium-light);
+    background-color: transparent;
+    font-size: 1rem;
+    color: var(--dark);
+}
+
+.input-field input:focus,
+.input-field textarea:focus {
+    outline: none;
+    border-bottom: 2px solid var(--primary);
+}
+
+.input-field input:focus~label,
+.input-field textarea:focus~label,
+.input-field input:not(:placeholder-shown)~label,
+.input-field textarea:not(:placeholder-shown)~label {
+    top: -1.2rem;
+    font-size: 1rem;
+    color: var(--primary);
+}
+
+
+/************************/
+/*      LISTES          */
+/************************/
+.list-group {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: var(--light);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.list-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.list-item i {
+    color: var(--primary);
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+
+.list-item span {
+    font-size: 1rem;
+    color: var(--dark);
+}
+
+/************************/
+/*      CARTES          */
+/************************/
+.card {
+    background-color: var(--light);
+    /* Couleur de fond des cartes */
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.card-image img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fond semi-transparent pour le titre */
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.card-action {
+    padding: 1rem;
+    text-align: center;
+}
+
+.btn.primary {
+    background-color: var(--primary);
+    /* Couleur principale pour les boutons */
+    color: white;
+}
+
+.card.horizontal {
+    display: flex;
+    align-items: center;
+}
+
+.card.horizontal .card-image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5%;
+}
+
+.card.horizontal .card-stacked {
+    padding-left: 10px;
+}
+
+.card .card-image:hover img {
+    opacity: 0.8;
+}
+
+/************************/
+/*      COMMENTARY      */
+/************************/
+
+.comment {
+    background: #f8f8f8;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.comment-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.comment-author {
+    font-weight: bold;
+    color: #333;
+}
+
+.comment-time {
+    font-size: 0.85em;
+    color: #777;
+}
+
+.comment-text {
+    margin-top: 6px;
+    color: #444;
+}
+
+.comments-section {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.comments-list {
+    margin-bottom: 20px;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.comment-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+
+.comment-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.comment-btn:hover {
+    background: var(--secondary);
+}
+
+/************************/
+/*   EVENEMENT PAGE     */
+/************************/
+
+/************************/
+/*      EVENTPAGE          */
+/************************/
+
+/* Container principal */
+.containerevent {
+    padding: 2rem;
+}
+
+/* Image responsive */
+.responsive-eventimg {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Section icônes + bouton */
+.icon-sectionevent {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.icon-sectionevent i {
+    font-size: 2rem;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.icon-sectionevent .btn {
+    margin-left: auto; /* Place le bouton à droite */
+}
+
+/* Informations supplémentaires */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+ul li i {
+    margin-right: 0.5rem;
+}
+
+/* Réseaux sociaux */
+.social-iconsevent {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-iconsevent a {
+    color: var(--primary);
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.social-iconsevent a:hover {
+    color: var(--secondary);
+}
+
+
+
+
+/************************/
+/*      SEPARATEUR      */
+/************************/
+
+.section-with-line {
+    padding: 2rem 0;
+    /* Espacement interne pour chaque section */
+    position: relative;
+    /* Permet de positionner la ligne */
+}
+
+.section-with-line:not(:last-child)::after {
+    content: "";
+    /* Crée un pseudo-élément pour la ligne */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    /* Largeur de la ligne */
+    height: 1px;
+    /* Épaisseur de la ligne */
+    background-color: #ccc;
+    /* Couleur de la ligne */
+}
+
+
+/*******************/
+/*     BANNER SM   */
+/*******************/
+.bannersm {
+    width: 100%;
+    height: 300px;
+    background: url('./assets/img/bannersm.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+.bannersm::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+}
+.bannersm-content {
+    position: relative;
+    z-index: 1;
+}
+.bannersm h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+.bannersm p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+.bannersm a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff6600;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+.bannersm a:hover {
+    background: #e65c00;
+}
+
+/*******************/
+/*     BANNER LG   */
+/*******************/
+.bannerlg {
+    width: 100%;
+    height: 400px; /* Ajuste la hauteur selon tes besoins */
+    background: url('./assets/img/bannerlg.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    color: white;
+}
+
+.bannerlg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1); /* Effet sombre pour améliorer la lisibilité du texte */
+}
+
+.bannerlg-content {
+    position: relative;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.bannerlg h1 {
+    font-size: 6rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.bannerlg p {
+    font-size: 2rem;
+    color: var(--info);
+}
+
+
+/*****************/
+/*     FOOTER    */
+/*****************/
+
+.footer {
+    background: #001F3F;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+.footer a {
+    color: #ff6600;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.footer a:hover {
+    text-decoration: underline;
+}

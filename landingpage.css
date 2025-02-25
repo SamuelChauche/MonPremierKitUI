@@ -1,0 +1,121 @@
+/************************/
+/*      STYLES          */
+/************************/
+
+/* Variables de la charte graphique */
+:root {
+    --primary: #001524;
+    --secondary: #15616d;
+    --dark: #78290f;
+    --medium-light: #ff7d00;
+    --light: #ffecd1;
+}
+
+/* Typographie */
+body {
+    font-family: 'Zain', sans-serif;
+    color: white; /* Texte en blanc pour contraster avec l'image */
+    line-height: 1.6;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Delius Swash Caps', cursive;
+}
+
+/* Sections pleine largeur avec texte sur photo */
+.full-width-section {
+    position: relative;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alignement à gauche */
+    text-align: left; /* Texte aligné à gauche */
+}
+
+.full-width-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.section-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 0 1rem;
+    margin-left: 2rem; /* Marge à gauche */
+}
+
+.section-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.section-description {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+/*****************
+/* Boutons */
+/*****************/
+.section-contentright {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 0 1rem;
+    margin-right: 2rem; /* Marge à droite */
+    margin-left: auto; /* Pousse le contenu vers la droite */
+}
+
+.section-titleright {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.section-descriptionright {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+.btn.primary {
+    display: center;
+    align-items: center;
+    padding: 0.1rem 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 0.2rem;
+    transition: opacity 0.3s ease;
+}
+
+.btn.primary:hover {
+    background-color: var(--dark);
+}
+#buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+/* Images de fond pour chaque section */
+.full-width-section:nth-child(1) {
+    background-image: url('assets/img/backgroundright.jpg');
+}
+
+.full-width-section.reverse {
+    background-image: url('assets/img/bakcground\ left.jpg');
+}
